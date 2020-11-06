@@ -131,6 +131,7 @@
 	text-transform: $text-transform;
 }
 
+// Centering with transform
 @mixin mid() {
 	top: 50%;
 	left: 50%;
@@ -138,7 +139,7 @@
 	position: absolute;
 }
 
-
+// Centering with flexbox
 @mixin midflex() {
 	display: flex;
 	align-items: center;
@@ -185,4 +186,10 @@
 	&::-webkit-scrollbar-thumb {
 		background: #2b2b2b;
 	}
+}
+
+
+@mixin button($padding-y, $padding-x, $border-radius){
+	padding: $padding-y $padding-x;
+    border-radius: $border-radius;
 }

@@ -1,91 +1,79 @@
-// header .logo{
-// 	width: 90px;
-// 	height: 50px;
-//     // @include desktop {
-        
-//     // }
-//     // @include tablet {
-        
-//     // }
-//     // @include mobile {
-        
-//     // }
-//     // @include mobile-xxs {
-        
-//     // }
-// }
+header {
+  background-color: transparent;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  font-size: 1vw;
+  z-index: 100;
+  .container-fluid {
+    display: flex;
+    position: relative;
+    height: 100%;
+    align-items: center;
+    .logo {
+      @include midflex;
+      margin-left: 2.5vw;
+    }
+    .menu {
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      .nav {
+        height: 100%;
+        @include midflex;
+        li {
+          margin: 0 1.563vw;
+          a {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
 
+    .action {
+      position: absolute;
+      right: 3%;
+      @include midflex;
+      .action__group {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .search {
+          display: inline;
+          cursor: pointer;
+          margin-right: 1.25vw;
+          width: 1.88vw;
+        }
+        .store {
+          @include button(7px, 24px, 3px);
+          margin-right: 0.625vw;
+        }
 
-header .logo{
-	width: 90px;
-	height: 50px;
-}
+        .register {
+          @include button(7px, 15px, 3px);
+        }
+      }
+    }
+  }
 
-header .menu{
-	width: 400px;
-	height: 50px;
-}
+  @include mobile {
+    // $header-height-mobile: 25px;
 
-header .lang{
-	width: 400px;
-	height: 50px;
-}
-
-header .lang .text{
-	
-}
-
-$background: #000; //scss
-header{
-	width: 100%;
-	height: 50px;
-	--background: #000; // css
-	.logo{
-		width: 50px;
-		height: 50px;
-		background: $background; // scss
-		background: var(--background);
-		
-		@include midflex();
-	}
-	.menu{
-		width: 500px;
-		height: 50px;
-		background: $background;
-		background: var(--background);
-
-		ul{
-			li{
-				a{
-					font-size: 18px;
-					line-height: 24px;
-				}
-			}
-		}
-	}
-	.lang{
-		width: 100px;
-		height: 50px;
-		.text{
-			font-size: 20px;
-			line-height: 30px;
-
-			@include overtext(3);
-			&:hover{
-				color:red;
-			}
-			&:before{
-				content: '';
-				width: 10px;
-				height: 10px;
-			}
-		}
-	}
-}
-
-
-.text{
-	font-size:20px;
-	line-height: 32px;
-	color: red;
+    height: $header-height-mobile;
+    .container-fluid {
+      .logo {
+        margin: 0;
+        img {
+          width: 90px;
+        }
+      }
+      .menu,
+      .action {
+        display: none;
+      }
+    }
+  }
 }

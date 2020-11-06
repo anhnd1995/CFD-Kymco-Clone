@@ -1,6 +1,9 @@
 /*primary colors*/
 $white-cl: #fff;
 $black-cl: #000;
+$gray-cl: #d8d8d8;
+$primary-red: #f4352c;
+$secondary-red: #f7635c;
 
 /*global text color*/
 $text-cl: #222;
@@ -15,11 +18,21 @@ $t: 0.4s;
 $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
 
 /*font families*/
-$font-stack: "Open Sans", sans-serif;
-
+$font-stack: 'SVN-Avo', sans-serif;
+$font-heading-button: 'SFU DIN', sans-serif;
+$font-textbox: 'UTM-Avo-normal', sans-serif;
+$font-DIN: 'DIN Condensed', sans-serif;
 /*headings typo*/
 $fz-text: 16px;
 $lh-text: normal;
+
+$fz-heading: 3.75vw;
+$fz-textbox: 1.37vw;
+
+$fz-card-title: 2.2vw;
+$fz-card-subtitle: 1.25vw;
+
+$fz-button: 1.56vw;
 
 $fz-text-m: 16px;
 $lh-text-m: normal;
@@ -41,3 +54,8 @@ $lg-max: ($lg-min - 1);
 $max-width: 1920px;
 $container-max-width: $max-width;
 $container-width: 1040px;
+
+
+// Header
+
+$header-height-mobile: 25px;

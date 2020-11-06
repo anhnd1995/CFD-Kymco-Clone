@@ -1,14 +1,43 @@
 footer {
-	@include desktop {
-		
-	}
-	@include tablet {
-		
-	}
-	@include mobile {
-		
-	}
-	@include mobile-xxs {
-		
-	}
+  text-align: center;
+  background: #000;
+  color: white;
+  height: 400px;
+  .container {
+	  height: 100%;
+	  h4{
+		  text-transform: uppercase;
+		  font-family: $font-DIN;
+		  font-size: 1.875rem;
+		  padding-top: 50px;
+	  }
+	  .social{
+		margin: 45px auto;
+	  }
+
+	  ul{
+		  display: flex;
+		justify-content: center;
+		text-transform: uppercase;
+		margin: 40px auto	;
+
+		li{
+			padding: 0 15px;
+			border-right: 1px white solid;
+			cursor: pointer;
+			transition: .3s;
+			&:last-of-type{
+				border-right: none;
+			}
+			&:hover{
+				color: $primary-red;
+				transition: .3s;
+			}
+		}
+	  }
+
+	  .logo{
+		  margin-bottom: 20px;
+	  }
+  }
 }

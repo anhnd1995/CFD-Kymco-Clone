@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Grunt Project</title>
-    <link rel="icon" href="https://www.vivosmartphone.vn/themes/vivo/favicon.ico">
+    <title>Kymco Project</title>
+    <link
+      rel="icon"
+      href="https://www.vivosmartphone.vn/themes/vivo/favicon.ico"
+    />
     <meta name="title" content="" />
     <meta name="description" content="" />
     <meta property="og:locale" content="vi" />
@@ -17,16 +19,225 @@
     <meta property="og:site_name" content="" />
     <meta property="og:image" content="" />
 
-    <link rel="stylesheet" href="dest/style.min.css">
-    <link rel="stylesheet" href="dest/fonts.css">
-    <link rel="stylesheet" href="dest/stylelibs.min.css">
-</head>
+    <link rel="stylesheet" href="dest/style.min.css" />
+    <link rel="stylesheet" href="dest/fonts.css" />
+    <link rel="stylesheet" href="dest/stylelibs.min.css" />
+  </head>
 
-<body>
-    <h1>Kymco Project</h1>
+  <body>
+    <header>
+      <div class="container-fluid">
+        <div class="logo">
+          <img src="./img/logo.png" alt="" />
+        </div>
+        <div class="menu">
+          <ul class="nav">
+            <li><a href="#">sản phẩm</a></li>
+            <li><a href="#">công nghệ</a></li>
+            <li><a href="#">dịch vụ</a></li>
+            <li><a href="#">tin tức</a></li>
+          </ul>
+        </div>
+        <div class="action">
+          <div class="action__group">
+            <i><img src="./img/icon-search.png" alt="" class="search" /></i>
+            <a href="" class="button store">đại lý</a>
+            <a href="" class="button register">đăng ký khách hàng</a>
+          </div>
+        </div>
+      </div>
+    </header>
 
+    <main>
+      <section class="banner">
+        <div class="banner__item">
+          <div class="banner__bg">
+            <img src="./img/home-bg-1.jpg" alt="" />
+          </div>
+          <div class="banner__text">
+            <p>Phong cách thể thao</p>
+            <p>Chiến binh mạnh mẽ</p>
+          </div>
+          <div class="banner__control">
+            <div class="banner__arrow">
+              <p>Kéo xuống</p>
+              <i><img src="./img/icon-arrow-down.png" alt="" /></i>
+            </div>
+            <div class="banner__slide">
+              <p>01 /<span> 03</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="intro">
+        <div class="intro__item">
+          <div class="intro__img">
+            <img src="./img/home-intro-1.jpg" alt="" class="intro-bg" />
+            <a href="" class="button prev-btn">
+              <i><img src="./img/icon-left.png" alt="" /></i>
+            </a>
+            <a href="" class="button next-btn">
+              <i><img src="./img/icon-right.png" alt="" /></i>
+            </a>
+          </div>
+          <div class="container">
+            <div class="intro__text textbox --dashline" id="intro">
+              <h2>sứ mệnh của kymco</h2>
+              <p>
+                Trong suốt hơn năm thập kỷ qua, KYMCO không quên sứ mệnh tạo ra
+                các phương tiện cá nhân tiện lợi và hữu ích trong cuộc sống, từ
+                đó giành được trái tim của người tiêu dùng trên toàn thế giới,
+                trong đó có Việt Nam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products">
+        <div class="container">
+          <div class="textbox --center">
+            <h2>Sản phẩm hot</h2>
+            <p>
+              Khám phá dòng xe được yêu thích nhất luôn nằm trong top bán chạy
+            </p>
+          </div>
+          <div class="products__item">
+            <div class="products__card">
+              <div class="product__img">
+                <img src="./img/home-product-1.jpg" alt="" />
+              </div>
+              <div class="products__content">
+                <p>like</p>
+                <p class="code">50</p>
+                <a href="" class="button">xem chi tiết</a>
+              </div>
+            </div>
+            <div class="products__card --large">
+              <div class="product__img">
+                <img src="./img/home-product-2.png" alt="" />
+              </div>
+              <div class="products__content">
+                <p>k-pipe</p>
+                <p class="code">125</p>
+                <a href="" class="button">xem chi tiết</a>
+              </div>
+            </div>
+            <div class="products__card">
+              <div class="product__img">
+                <img src="./img/home-product-3.jpg" alt="" />
+              </div>
+              <div class="products__content">
+                <p>candy</p>
+                <p class="code">50</p>
+                <a href="" class="button">xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+          <div class="products__other">
+            <a href="" class="button">xem thêm sản phẩm khác</a>
+          </div>
+        </div>
+      </section>
+      <section class="option">
+        <div class="container">
+          <div class="textbox">
+            <h2>
+              chọn xe <br />
+              theo cá tính
+            </h2>
+            <p>Xe bên bạn mang đậm chất riêng</p>
+          </div>
+          <div class="option__button">
+            <a href="" class="button">chọn xe dành riêng cho bạn</a>
+          </div>
+        </div>
+      </section>
+      <section class="news">
+        <div class="container">
+          <div class="textbox --center">
+            <h2>tin tức</h2>
+            <p>Tổng hợp tin tức mới nhất từ KYMCO Việt Nam & quốc tế</p>
+          </div>
+          <div class="news__content">
+            <div class="news__item card">
+              <div class="card__image">
+                <img src="./img/home-news-1.jpg" alt="" />
+              </div>
+              <div class="card__content">
+                <div class="card__text">
+                  <h4>experience the range to believe it</h4>
+                  <h3>discover your dream bike</h3>
+                </div>
+                <div class="card__detail">
+                  <a href="">Xem chi tiết</a>
+                </div>
+              </div>
+            </div>
+            <div class="news__item card">
+              <div class="card__image">
+                <img src="./img/home-news-2.jpg" alt="" />
+              </div>
+              <div class="card__content">
+                <div class="card__text">
+                  <h3>extend your 2-years limited warranty</h3>
+                  <p>Until March 20, 2020</p>
+                </div>
+                <div class="card__detail">
+                  <a href="">Xem chi tiết</a>
+                </div>
+              </div>
+            </div>
+            <div class="news__item card">
+              <div class="card__image">
+                <img src="./img/home-news-3.jpg" alt="" />
+              </div>
+              <div class="card__content">
+                <div class="card__text">
+                  <h3>new game for your bike this year</h3>
+                  <p>
+                    Roll into Milwaukee Labor Day Weekend 2018 and join the
+                    celebration. No matter what...
+                  </p>
+                </div>
+                <div class="card__detail">
+                  <a href="">Xem chi tiết</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="news__other">
+            <a href="" class="button">xem thêm tin tức khác</a>
+          </div>
+        </div>
+      </section>
+      <section class="network">
+        <div class="container">
+          <div class="textbox --center">
+            <h2>kymco network</h2>
+            <p>Mạng lưới KYMCO trên toàn thế giới</p>
+          </div>
+          <div class="network__button">
+            <a href="" class="button">tìm hiểu thêm</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <h4>kymco vietnam</h4>
+        <img src="./img/social-media.jpg" alt="" class="social">
+        <ul>
+          <li><a href=""></a>về kymco</li>
+          <li><a href=""></a>tuyển dụng</li>
+          <li><a href=""></a>liên hệ</li>
+          <li><a href=""></a>kymco network</li>
+        </ul>
+        <img src="./img/logo.png" alt="" class="logo">
+        <p>KWANG YANG VIỆT NAM © 2018, All Rights Reserved</p>
+      </div>
+    </footer>
     <script type="text/javascript" src="dest/jsmain.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-</body>
-
+  </body>
 </html>

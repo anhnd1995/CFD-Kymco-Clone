@@ -1,0 +1,138 @@
+// Button component
+.button {
+  background-color: $primary-red;
+  text-transform: uppercase;
+  color: $white-cl;
+  font-family: $font-heading-button;
+  transition: .5s;
+  &:hover{
+    background-color: $secondary-red;
+    transition: .5s;
+  }
+}
+// Textbox component
+
+.textbox {
+  h2 {
+    font-size: $fz-heading;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: $font-heading-button;
+  }
+  p {
+    font-size: $fz-textbox;
+    font-family: $font-textbox;
+  }
+
+  @include mobile {
+    h2 {
+      font-size: 3.75rem;
+    }
+    p {
+      font-size: 1.37rem;
+    }
+  }
+}
+
+.--dashline {
+  h2 {
+    &::before {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 18.125vw;
+      background: #000;
+      transform: translateX(-13.563vw);
+    }
+  }
+  @include mobile {
+    h2::before {
+      transform: translateX(-9vw);
+    }
+  }
+}
+
+.--center {
+  text-align: center;
+}
+
+//Card component
+.card {
+  border: 1px solid $gray-cl;
+  font-family: $font-DIN;
+
+  .card__image {
+    width: 100%;
+    height: 20vw;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .card__content {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .card__text {
+      text-align: center;
+      width: 75%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      // height: ;
+      h4 {
+        font-size: 1.25vw;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+      h3 {
+        @extend h4;
+        font-size: 2.2vw;
+      }
+      p {
+        font-size: 1vw;
+        height: 80px;
+        font-family: $font-textbox;
+      }
+    }
+    .card__detail {
+      text-align: center;
+      a {
+        color: black;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include mobile{
+    width: 100%;
+    
+    .card__image {
+      width: 100%;
+      height: 270px;
+    }
+    .card__content {
+      .card__text {
+        h4{
+          font-size: 2rem;
+        }
+        h3{
+          font-size: 3.6rem;
+        }
+        p{
+          font-size: 1.67rem;
+        }
+      }
+      .card__detail{
+        a{
+          font-size: 1.67rem;
+        }
+      }
+    }
+  }
+}
