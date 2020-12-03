@@ -1,0 +1,142 @@
+.productsBanner {
+  height: 940px;
+  .productsBanner__bg {
+    height: 530px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+      url(../../../img/home-option.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .container {
+    .textbox {
+      margin-top: 60px;
+      h2 {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.productsContent {
+  width: 100%;
+  overflow: hidden;
+  .container {
+    .productsContent__option {
+      ul {
+        position: relative;
+        display: flex;
+        li {
+          text-transform: uppercase;
+          font-family: $font-heading-button;
+          font-size: 3.125vw;
+          padding: 0 30px;
+
+          &:first-of-type {
+            border-right: 2px solid black;
+          }
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          height: 2px;
+          width: 40vw;
+          position: absolute;
+          bottom: 0;
+          left: 67%;
+          background-color: #000;
+        }
+      }
+    }
+    .productsContent__all {
+      .model {
+        .button {
+          //   z-index: 10;
+
+          i {
+            img {
+              display: inline !important;
+              width: 37px;
+            }
+          }
+        }
+        .model-next-btn {
+          position: absolute;
+          right: -70px;
+          bottom: 130px;
+          @include button(15px, 20px, 0);
+          transform: skewX(-10deg);
+        }
+        .model-prev-btn {
+          @extend .model-next-btn;
+          right: auto;
+          left: 397px;
+          transform: rotate(180deg) skewX(-10deg);
+        }
+        .hide {
+          display: none;
+        }
+
+        .model__list {
+          // .hide{
+          //     display: none;
+          // }
+        }
+      }
+    }
+    .active {
+      display: block;
+    }
+  }
+
+  @include desktop {
+    .container {
+      .productsContent__all {
+        .model {
+          .button {
+            i {
+              img {
+                display: inline !important;
+                width: 20px;
+              }
+            }
+          }
+          .model-next-btn {
+            bottom: 180px;
+            right: -80px;
+          }
+          .model-prev-btn {
+            left: 357px;
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    .container {
+      .productsContent__all {
+        .model {
+          .button {
+            i {
+              img {
+                display: inline !important;
+                width: 20px;
+              }
+            }
+          }
+          .model-next-btn {
+            bottom: 55px;
+            right: -15px;
+          }
+          .model-prev-btn {
+            left: -20px;
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+}

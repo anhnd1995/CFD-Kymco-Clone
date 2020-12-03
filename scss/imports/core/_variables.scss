@@ -2,12 +2,14 @@
 $white-cl: #fff;
 $black-cl: #000;
 $gray-cl: #d8d8d8;
-$primary-red: #f4352c;
-$secondary-red: #f7635c;
+$light-gray-cl: #f8f8f8;
+$primary-red: rgb(244, 53, 44);
+$secondary-red: #b11109;
 
 /*global text color*/
 $text-cl: #222;
 $text-black-cl: #000;
+$ruler-cl: #c1c1c1;
 
 /*global bg color*/
 $main-bg-cl: #000;
@@ -18,21 +20,22 @@ $t: 0.4s;
 $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
 
 /*font families*/
-$font-stack: 'SVN-Avo', sans-serif;
-$font-heading-button: 'SFU DIN', sans-serif;
-$font-textbox: 'UTM-Avo-normal', sans-serif;
-$font-DIN: 'DIN Condensed', sans-serif;
+$font-stack: "SVN-Avo", sans-serif;
+$font-heading-button: "SFU DIN", sans-serif;
+$font-textbox: "UTM-Avo-normal", sans-serif;
+$font-DIN: "DIN Condensed", sans-serif;
 /*headings typo*/
 $fz-text: 16px;
 $lh-text: normal;
 
-$fz-heading: 3.75vw;
-$fz-textbox: 1.37vw;
+$fz-heading: 3.75rem;
+$fz-textbox: 1.375rem;
+$fz-product-text: 1.125rem;
 
-$fz-card-title: 2.2vw;
-$fz-card-subtitle: 1.25vw;
+$fz-card-title: 2.2rem;
+$fz-card-subtitle: 1.25rem;
 
-$fz-button: 1.56vw;
+$fz-button: 1.56rem;
 
 $fz-text-m: 16px;
 $lh-text-m: normal;
@@ -54,7 +57,6 @@ $lg-max: ($lg-min - 1);
 $max-width: 1920px;
 $container-max-width: $max-width;
 $container-width: 1040px;
-
 
 // Header
 

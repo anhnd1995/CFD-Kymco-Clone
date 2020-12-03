@@ -1,0 +1,367 @@
+.detailBanner {
+  position: relative;
+  margin-bottom: 19.75vw;
+  height: 56.25vw;
+  &__bg {
+    height: 100vh;
+    position: relative;
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+
+    .detailBanner__bike {
+      position: relative;
+
+      width: 69.375vw;
+      height: 53.375vw;
+      margin: 0 auto;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .pulse {
+        display: block;
+        width: 6.25vw;
+        height: 6.25vw;
+        border-radius: 50%;
+        background: $primary-red;
+        cursor: pointer;
+        box-shadow: 0 0 0 20px rgba(244, 53, 44, 0.6);
+        z-index: 100;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+        }
+
+        img {
+          width: 3.75vw;
+          height: 3.75vw;
+        }
+      }
+      .pulse:hover {
+        animation: pulse 2s infinite;
+        /*   animation: none; */
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(244, 53, 44, 0.6);
+        }
+        70% {
+          -webkit-box-shadow: 0 0 0 20px rgba(244, 53, 44, 0);
+        }
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(244, 53, 44, 0);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(244, 53, 44, 0.6);
+          box-shadow: 0 0 0 20px rgba(244, 53, 44, 0);
+        }
+        70% {
+          -moz-box-shadow: 0 0 0 20px rgba(244, 53, 44, 0);
+          box-shadow: 0 0 0 0 rgba(244, 53, 44, 0.6);
+        }
+        100% {
+          -moz-box-shadow: 0 0 0 20px rgba(244, 53, 44, 0);
+          box-shadow: 0 0 0 20px rgba(244, 53, 44, 0);
+        }
+      }
+    }
+
+    .detailBanner__color {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        margin: 0 10px;
+      }
+
+      .active {
+        border: 4px solid #7e7e7e;
+      }
+      .red {
+        background-color: red;
+      }
+      .green {
+        background-color: #617941;
+      }
+      .black {
+        background-color: black;
+      }
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 24vw;
+
+    .container {
+      .detailBanner__bike {
+        .pulse {
+          box-shadow: 0 0 0 10px rgba(244, 53, 44, 0.6);
+        }
+      }
+      .detailBanner__color {
+        a {
+          width: 30px;
+          height: 30px;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+.detailIntro {
+  .container {
+    .row {
+      justify-content: center;
+      align-items: center;
+    }
+    .line {
+      margin: 3.125vw auto;
+      width: 70px;
+      height: 2px;
+      background-color: #000;
+    }
+    .detailPrice {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $font-heading-button;
+      line-height: 3.5rem;
+
+      h4 {
+        font-size: 2.2rem;
+      }
+
+      h3 {
+        font-size: 4.375rem;
+      }
+    }
+  }
+}
+
+.detailSpecs {
+  margin-top: 7.5vw;
+  margin-bottom: 3.75vw;
+  position: relative;
+  // max-height: 650px;
+  .container {
+    .row {
+      .specs {
+        h2 {
+          font-size: $fz-heading;
+          font-family: $font-heading-button;
+          text-transform: uppercase;
+          margin-bottom: 3.75rem;
+        }
+
+        &__item {
+          width: 100%;
+          .title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            .left {
+              display: flex;
+              width: 100%;
+              h5 {
+                white-space: nowrap;
+                text-transform: uppercase;
+                font-family: $font-heading-button;
+                font-size: $fz-card-title;
+                align-self: flex-end;
+                margin-right: 25px;
+              }
+              .divider {
+                width: 100%;
+                height: 2px;
+                background-color: #000;
+                align-self: flex-end;
+                margin-bottom: 10px;
+                margin-right: 25px;
+              }
+            }
+            .plus-minus-toggle {
+              cursor: pointer;
+              height: 21px;
+              position: relative;
+              width: 21px;
+              align-self: flex-end;
+              &:before,
+              &:after {
+                background: #000;
+                content: "";
+                height: 5px;
+                left: 0;
+                position: absolute;
+                top: 7px;
+                width: 21px;
+                transition: transform 500ms ease;
+              }
+              &:after {
+                transform-origin: center;
+              }
+              &.collapsed {
+                &:after {
+                  transform: rotate(90deg);
+                }
+                &:before {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+          }
+          .content {
+            display: flex;
+            justify-content: space-between;
+            font-family: $font-textbox;
+            font-size: $fz-product-text;
+            li {
+              padding: 10px 0;
+            }
+            &__left {
+            }
+            &__right {
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+  .specs__image {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    z-index: 1;
+    .row {
+      width: 100%;
+      background: #f1f1f1;
+      .text {
+        padding: 0 0.875rem;
+        margin: 3.125rem auto;
+        border-left: 2px solid black;
+        line-height: 1;
+        p {
+          font-family: $font-textbox;
+          font-size: $fz-card-subtitle;
+          white-space: nowrap;
+        }
+        span {
+          font-family: $font-heading-button;
+          font-size: 3rem;
+          text-transform: uppercase;
+        }
+      }
+
+      .ruler {
+        width: 100%;
+        height: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 2px solid $ruler-cl;
+        border-left: 2px solid $ruler-cl;
+        p {
+          height: 2px;
+          background: $ruler-cl;
+          width: 100%;
+        }
+      }
+
+      .number {
+        text-align: center;
+        font-family: $font-heading-button;
+        font-size: 1.875rem;
+      }
+
+      .image {
+        margin-bottom: 1.25rem;
+        img {
+          width: 85%;
+        }
+      }
+      .left {
+        padding-left: 3.43rem;
+      }
+      .right {
+        .image {
+          display: flex;
+          img {
+            width: 86.5%;
+          }
+          .--vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            display: flex;
+            flex-direction: column-reverse;
+            .ruler-vertical {
+              width: 15px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-top: 2px solid $ruler-cl;
+              border-bottom: 2px solid $ruler-cl;
+              p {
+                height: 100%;
+                width: 2px;
+                background: $ruler-cl;
+              }
+            }
+          }
+        }
+        .diameter {
+          .ruler {
+            width: 88%;
+          }
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    height: 100%;
+    .container {
+      margin-bottom: 30px;
+    }
+    .specs__image {
+      position: relative;
+      width: 100%;
+
+      .row {
+        flex-wrap: nowrap;
+        margin-left: 0;
+        .left {
+          flex: 1;
+        }
+        .right {
+          flex: 2.6;
+        }
+      }
+    }
+  }
+}
+
+.detailPage {
+  margin-bottom: 4rem;
+  margin-top: 17rem;
+
+  @include mobile {
+    margin-top: 8rem;
+  }
+}

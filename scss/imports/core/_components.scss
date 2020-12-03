@@ -4,10 +4,10 @@
   text-transform: uppercase;
   color: $white-cl;
   font-family: $font-heading-button;
-  transition: .5s;
-  &:hover{
+  transition: 0.5s;
+  &:hover {
     background-color: $secondary-red;
-    transition: .5s;
+    transition: 0.5s;
   }
 }
 // Textbox component
@@ -24,7 +24,13 @@
     font-family: $font-textbox;
   }
 
+  .product__text {
+    font-size: 1.125rem;
+  }
+
   @include mobile {
+    width: 100% !important;
+    margin-bottom: 15px;
     h2 {
       font-size: 3.75rem;
     }
@@ -60,6 +66,7 @@
 .card {
   border: 1px solid $gray-cl;
   font-family: $font-DIN;
+  cursor: pointer;
 
   .card__image {
     width: 100%;
@@ -72,7 +79,7 @@
   .card__content {
     margin-top: 10px;
     margin-bottom: 30px;
-    height: 200px;
+    height: 13vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -96,7 +103,7 @@
       }
       p {
         font-size: 1vw;
-        height: 80px;
+        height: 5vw;
         font-family: $font-textbox;
       }
     }
@@ -105,34 +112,224 @@
       a {
         color: black;
         text-decoration: underline;
+        transition: 0.3s;
+
+        &:hover {
+          color: rgba(0, 0, 0, 0.5);
+          transition: 0.3s;
+        }
       }
     }
   }
 
-  @include mobile{
+  @include mobile {
     width: 100%;
-    
+    height: 68vh;
+    padding-bottom: 22rem;
+    margin: 3rem 0;
     .card__image {
       width: 100%;
-      height: 270px;
+      height: 100%;
     }
     .card__content {
+      height: 44vw;
       .card__text {
-        h4{
+        h4 {
           font-size: 2rem;
         }
-        h3{
+        h3 {
           font-size: 3.6rem;
         }
-        p{
+        p {
           font-size: 1.67rem;
         }
       }
-      .card__detail{
-        a{
+      .card__detail {
+        a {
           font-size: 1.67rem;
         }
       }
+    }
+  }
+}
+
+// Product components
+
+.model {
+  // display: flex;
+  position: relative;
+  height: 596px;
+  margin: 100px auto;
+  .model__bg {
+    position: absolute;
+    left: -104px;
+  }
+  .model__content {
+    position: absolute;
+    left: 37%;
+    background-color: $light-gray-cl;
+    transform: skewX(-10deg);
+    height: 85.5%;
+    width: 65%;
+
+    .textbox {
+      padding-left: 45px;
+      padding-top: 30px;
+      width: 70%;
+      transform: skewX(10deg);
+
+      h2,
+      p {
+        transform: skewX(-10deg);
+      }
+    }
+  }
+  .model__list {
+    position: absolute;
+    bottom: 90px;
+    left: 42%;
+    display: flex;
+    .model__item {
+      width: 175px;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-family: $font-heading-button;
+      height: 100%;
+      margin: 0 20px;
+      position: relative;
+      h5 {
+        font-size: $fz-textbox;
+      }
+      img {
+        width: 170px;
+        height: 120px;
+      }
+
+      .price {
+        border-left: 2px solid black;
+        padding: 0 10px;
+        line-height: 20px;
+        p {
+          font-size: 0.8rem;
+        }
+        span {
+          font-size: 1.875rem;
+        }
+      }
+      .detail {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        opacity: 0;
+        transition: 0.5s;
+        .button {
+          @include button(13px, 30px, 30px);
+          display: block;
+          width: 100%;
+          text-align: center;
+          margin-top: 20px;
+          font-size: $fz-textbox;
+        }
+      }
+
+      &:hover {
+        .detail {
+          opacity: 1;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  @include desktop {
+    .model__bg {
+      width: 520px;
+    }
+    .model__content {
+      left: 40%;
+      height: 79%;
+    }
+    .model__list {
+      bottom: 125px;
+      left: 44%;
+      .model__item {
+        width: 140px;
+        height: 200px;
+        h5 {
+        }
+        .price {
+          span {
+            font-size: 1.5rem;
+          }
+        }
+        .detail {
+          .button {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    .model__bg {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    .model__content {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      margin-bottom: 30px;
+      .textbox {
+        width: 100%;
+      }
+    }
+    .model__list {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  }
+  @include mobile {
+  }
+}
+
+#item-1 {
+  .model__content {
+    top: 2%;
+  }
+}
+
+#item-2 {
+  .model__bg {
+    right: -67px;
+    left: auto;
+    z-index: 2;
+  }
+  .model__content {
+    left: -65px;
+  }
+  .model__list {
+    left: -15px;
+  }
+
+  @include desktop {
+    .model__bg {
+      width: 593px;
     }
   }
 }

@@ -1,9 +1,10 @@
 header {
-  background-color: transparent;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   height: 100px;
   display: flex;
   align-items: center;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   font-size: 1vw;
   z-index: 100;
   .container-fluid {
@@ -14,6 +15,7 @@ header {
     .logo {
       @include midflex;
       margin-left: 2.5vw;
+      cursor: pointer;
     }
     .menu {
       height: 100%;
@@ -27,6 +29,10 @@ header {
           margin: 0 1.563vw;
           a {
             text-transform: uppercase;
+            @include transition(0.5s);
+            &:hover {
+              color: $primary-red !important;
+            }
           }
         }
       }
@@ -61,7 +67,7 @@ header {
 
   @include mobile {
     // $header-height-mobile: 25px;
-
+    width: 100vw;
     height: $header-height-mobile;
     .container-fluid {
       .logo {

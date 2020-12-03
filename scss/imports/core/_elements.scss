@@ -1,28 +1,32 @@
 a {
-    // color: $text-cl;
-    text-decoration: none;
-    color: white;
-    // display: block;
+  // color: $text-cl;
+  text-decoration: none;
+  color: white;
+  // display: block;
 }
 img {
-    display: block;
-    margin: auto;
-    max-width: 100%;
+  display: block;
+  margin: auto;
+  max-width: 100%;
 }
 strong {
-    font-family: bb;
+  font-family: bb;
 }
 
 .-lv1 {
-    @include text(100px, b, 100px, $white-cl, none);
-    font-weight: normal;
-    margin: 0;
-    a {
-        @include text(100px, g, 100px, $white-cl, none);
-    }
-    @include tablet {
-    }
-    @include mobile {
-    }
+  @include text(100px, b, 100px, $white-cl, none);
+  font-weight: normal;
+  margin: 0;
+  a {
+    @include text(100px, g, 100px, $white-cl, none);
+  }
+  @include tablet {
+  }
+  @include mobile {
+  }
 }
 
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}

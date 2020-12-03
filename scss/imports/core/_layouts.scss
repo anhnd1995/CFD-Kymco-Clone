@@ -1,36 +1,36 @@
 * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    box-sizing: border-box;
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 html,
 body {
+  width: 100%;
+  max-width: $max-width;
+  -webkit-font-smoothing: antialiased;
+  margin: auto;
+  @include text($fz-text, $font-stack, $lh-text, $text-cl, none);
+  background: $white-cl;
+  letter-spacing: 0.4px;
+  position: relative;
+  // overflow: hidden;
+  @include custom-scrollbar();
+  .mainwrapper {
     width: 100%;
-    max-width: $max-width;
-    -webkit-font-smoothing: antialiased;
     margin: auto;
-    @include text($fz-text, $font-stack, $lh-text, $text-cl, none);
-    background: $white-cl;
-    letter-spacing: 0.4px;
-    position: relative;
-    @include custom-scrollbar();
-    .mainwrapper {
-        width: 100%;
-        margin: auto;
-        overflow: hidden;
-    }
-    @include desktop {
-        
-    }
-    @include tablet {
-        
-    }
-    @include mobile {
-        font-size: 8.4px;
-    }
+    overflow: hidden;
+  }
+  @include desktop {
+    font-size: 14px;
+  }
+  @include tablet {
+  }
+  @include mobile {
+    font-size: 8.4px;
+  }
 }

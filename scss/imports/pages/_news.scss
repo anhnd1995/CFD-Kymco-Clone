@@ -1,0 +1,55 @@
+.newsBanner {
+  position: relative;
+  .textbox {
+    color: white;
+    transform: scale(1.15);
+    @include mid;
+  }
+}
+
+.news__content {
+  margin-bottom: 8.75vw;
+  .container {
+    .news__page {
+      .row {
+        margin: 5vw auto;
+      }
+    }
+  }
+  .news__control {
+    text-align: center;
+    .button {
+      background-color: #fff;
+      color: black;
+      border: 1px solid $ruler-cl;
+      font-size: 1.25rem;
+      margin: 0 5px;
+    }
+    .active,
+    .button:hover {
+      color: white;
+      background-color: $primary-red;
+    }
+
+    .previous,
+    .next {
+      @include button(15px, 20px, 0);
+    }
+    .page {
+      @include button(15px, 25px, 0);
+    }
+
+    @include mobile {
+      .previous,
+      .next {
+        @include button(10px, 13px, 0);
+      }
+      .page {
+        @include button(10px, 20px, 0);
+      }
+    }
+  }
+
+  @include mobile {
+  }
+}

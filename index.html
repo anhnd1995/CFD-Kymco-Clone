@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Kymco Project</title>
-    <link
-      rel="icon"
-      href="https://www.vivosmartphone.vn/themes/vivo/favicon.ico"
-    />
     <meta name="title" content="" />
     <meta name="description" content="" />
     <meta property="og:locale" content="vi" />
@@ -28,14 +24,15 @@
     <header>
       <div class="container-fluid">
         <div class="logo">
-          <img src="./img/logo.png" alt="" />
+          <a href="index.html"><img src="./img/logo.png" alt="" /></a>
+          <h1 class="d-none">KYMCO</h1>
         </div>
         <div class="menu">
           <ul class="nav">
-            <li><a href="#">sản phẩm</a></li>
+            <li><a href="products.html">sản phẩm</a></li>
             <li><a href="#">công nghệ</a></li>
             <li><a href="#">dịch vụ</a></li>
-            <li><a href="#">tin tức</a></li>
+            <li><a href="news.html">tin tức</a></li>
           </ul>
         </div>
         <div class="action">
@@ -53,6 +50,8 @@
         <div class="banner__item">
           <div class="banner__bg">
             <img src="./img/home-bg-1.jpg" alt="" />
+            <img src="./img/home-bg-2.jpg" alt="" />
+            <img src="./img/home-bg-3.jpg" alt="" />
           </div>
           <div class="banner__text">
             <p>Phong cách thể thao</p>
@@ -64,7 +63,7 @@
               <i><img src="./img/icon-arrow-down.png" alt="" /></i>
             </div>
             <div class="banner__slide">
-              <p>01 /<span> 03</span></p>
+              <span class="indicator">01 /</span><span> 03</span>
             </div>
           </div>
         </div>
@@ -73,15 +72,40 @@
         <div class="intro__item">
           <div class="intro__img">
             <img src="./img/home-intro-1.jpg" alt="" class="intro-bg" />
-            <a href="" class="button prev-btn">
+            <img src="./img/home-intro-2.jpg" alt="" class="intro-bg" />
+            <img src="./img/home-intro-3.jpg" alt="" class="intro-bg" />
+          </div>
+          <div class="intro__control">
+            <a href="#" class="button prev-btn">
               <i><img src="./img/icon-left.png" alt="" /></i>
             </a>
-            <a href="" class="button next-btn">
+            <a href="#" class="button next-btn">
               <i><img src="./img/icon-right.png" alt="" /></i>
             </a>
           </div>
           <div class="container">
-            <div class="intro__text textbox --dashline" id="intro">
+            <div
+              class="intro__text active textbox --dashline"
+              style="display: block"
+            >
+              <h2>sứ mệnh của kymco</h2>
+              <p>
+                Trong suốt hơn năm thập kỷ qua, KYMCO không quên sứ mệnh tạo ra
+                các phương tiện cá nhân tiện lợi và hữu ích trong cuộc sống, từ
+                đó giành được trái tim của người tiêu dùng trên toàn thế giới,
+                trong đó có Việt Nam.
+              </p>
+            </div>
+            <div class="intro__text textbox --dashline">
+              <h2>CÔNG NGHỆ NOODOE</h2>
+              <p>
+                Noodoe đặt bạn vào trung tâm của mọi thứ và làm cho mọi khoảnh
+                khắc - từ khi bạn tiếp cận KYMCO. Thông qua từng hành trình,
+                từng nơi bạn đi qua, thậm chí là dừng ở chốt đèn đỏ cũng trở
+                thành một trải nghiệm tuyệt vời và thú vị hơn.
+              </p>
+            </div>
+            <div class="intro__text textbox --dashline">
               <h2>sứ mệnh của kymco</h2>
               <p>
                 Trong suốt hơn năm thập kỷ qua, KYMCO không quên sứ mệnh tạo ra
@@ -105,36 +129,36 @@
             <div class="products__card">
               <div class="product__img">
                 <img src="./img/home-product-1.jpg" alt="" />
-              </div>
-              <div class="products__content">
-                <p>like</p>
-                <p class="code">50</p>
-                <a href="" class="button">xem chi tiết</a>
+                <div class="products__content">
+                  <p>like</p>
+                  <p class="code">50</p>
+                  <a href="details.html" class="button">xem chi tiết</a>
+                </div>
               </div>
             </div>
             <div class="products__card --large">
               <div class="product__img">
                 <img src="./img/home-product-2.png" alt="" />
-              </div>
-              <div class="products__content">
-                <p>k-pipe</p>
-                <p class="code">125</p>
-                <a href="" class="button">xem chi tiết</a>
+                <div class="products__content">
+                  <p>k-pipe</p>
+                  <p class="code">125</p>
+                  <a href="details.html" class="button">xem chi tiết</a>
+                </div>
               </div>
             </div>
             <div class="products__card">
               <div class="product__img">
                 <img src="./img/home-product-3.jpg" alt="" />
-              </div>
-              <div class="products__content">
-                <p>candy</p>
-                <p class="code">50</p>
-                <a href="" class="button">xem chi tiết</a>
+                <div class="products__content">
+                  <p>candy</p>
+                  <p class="code">50</p>
+                  <a href="" class="button">xem chi tiết</a>
+                </div>
               </div>
             </div>
           </div>
           <div class="products__other">
-            <a href="" class="button">xem thêm sản phẩm khác</a>
+            <a href="products.html" class="button">xem thêm sản phẩm khác</a>
           </div>
         </div>
       </section>
@@ -146,9 +170,9 @@
               theo cá tính
             </h2>
             <p>Xe bên bạn mang đậm chất riêng</p>
-          </div>
-          <div class="option__button">
-            <a href="" class="button">chọn xe dành riêng cho bạn</a>
+            <div class="option__button">
+              <a href="" class="button">chọn xe dành riêng cho bạn</a>
+            </div>
           </div>
         </div>
       </section>
@@ -206,7 +230,7 @@
             </div>
           </div>
           <div class="news__other">
-            <a href="" class="button">xem thêm tin tức khác</a>
+            <a href="news.html" class="button">xem thêm tin tức khác</a>
           </div>
         </div>
       </section>
@@ -226,14 +250,14 @@
     <footer>
       <div class="container">
         <h4>kymco vietnam</h4>
-        <img src="./img/social-media.jpg" alt="" class="social">
+        <img src="./img/social-media.jpg" alt="" class="social" />
         <ul>
           <li><a href=""></a>về kymco</li>
           <li><a href=""></a>tuyển dụng</li>
           <li><a href=""></a>liên hệ</li>
           <li><a href=""></a>kymco network</li>
         </ul>
-        <img src="./img/logo.png" alt="" class="logo">
+        <img src="./img/logo.png" alt="" class="logo" />
         <p>KWANG YANG VIỆT NAM © 2018, All Rights Reserved</p>
       </div>
     </footer>
