@@ -49,13 +49,6 @@ $(".next-btn").on("click", function (e) {
   $introCarousel.flickity("next");
 });
 
-// $(".products__item").flickity({
-//   // groupCells: true,
-//   initialIndex: 1,
-//   prevNextButtons: false,
-//   pageDots: false,
-// });
-
 function enableSliderProduct(width) {
   if (width < 768) {
     $(".products__item").flickity({
@@ -83,10 +76,6 @@ let modelList = $(".carousel");
 $(".model-next-btn").on("click", (e) => {
   e.preventDefault();
 
-  // modelList[startIndex].classList.remove("show");
-  // modelList[startIndex].classList.add("hide");
-  // modelList[currentIndex].classList.remove("hide");
-  // modelList[currentIndex].classList.add("show");
   toggleShowHide(startIndex, currentIndex);
   startIndex++;
   currentIndex++;
@@ -98,11 +87,6 @@ $(".model-prev-btn").on("click", (e) => {
   e.preventDefault();
   startIndex--;
   currentIndex--;
-
-  // modelList[currentIndex].classList.remove("show");
-  // modelList[currentIndex].classList.add("hide");
-  // modelList[startIndex].classList.remove("hide");
-  // modelList[startIndex].classList.add("show");
   toggleShowHide(currentIndex, startIndex);
 
   checkFirstItem();
@@ -184,18 +168,44 @@ const changeColor = () => {
 
 // NEWS Page
 
-var list = $(".page").text().split("");
-
+// Choose page
 $.each($(".page"), (index, button) => {
   $(button).on("click", (e) => {
+    let nextPage = parseInt($(button).text());
     e.preventDefault();
-    $(".news__page").fadeOut(function () {
-      $(this).addClass("d-none");
-    });
-    $(".page").removeClass("active");
-    $(`*[data-page="${button.textContent}"]`)
-      .removeClass("d-none")
-      .fadeIn("slow");
-    $(button).addClass("active");
+    changePage(nextPage);
   });
 });
+
+// Click prev
+$(".previous").on("click", (e) => {
+  e.preventDefault();
+  let currentPage = getCurrentPage();
+  let prevPage = currentPage - 1;
+  if (currentPage > 1) {
+    changePage(prevPage);
+  }
+});
+
+// Click next
+$(".next").on("click", (e) => {
+  e.preventDefault();
+  let currentPage = getCurrentPage();
+  let nextPage = currentPage + 1;
+  if (currentPage < 3) {
+    changePage(nextPage);
+  }
+});
+
+function changePage(nextPage) {
+  let next = $("div").find(`[data-page='${nextPage}']`);
+  $(".news__page").addClass("d-none");
+  next.removeClass("d-none");
+  $(".page").removeClass("active");
+  $(`.page:contains(${nextPage})`).addClass("active");
+}
+
+function getCurrentPage() {
+  let currentPage = parseInt($("div[class='news__page']").attr("data-page"));
+  return currentPage;
+}
