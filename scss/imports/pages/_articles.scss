@@ -1,0 +1,48 @@
+.article {
+  margin-bottom: 4.375rem;
+  .content {
+    &__date {
+      font-family: $font-heading-button;
+      text-transform: uppercase;
+      font-size: 1.625rem;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 6.25rem;
+      .brands {
+        color: $primary-red;
+      }
+    }
+    &__title {
+      padding: 0.625rem 0;
+    }
+    &__main {
+      text-align: center;
+      font-family: $font-textbox;
+      > * {
+        padding: 1.56rem 0;
+      }
+    }
+    .social {
+      position: absolute;
+      height: 100%;
+      top: 250px;
+      a {
+        position: sticky;
+        position: -webkit-sticky;
+        height: 3rem;
+        width: 3rem;
+        background-color: $primary-red;
+        display: flex;
+        &:hover {
+          background-color: $secondary-red;
+        }
+      }
+      a:first-of-type {
+        top: 200px;
+      }
+      a:last-of-type {
+        top: 250px;
+      }
+    }
+  }
+}

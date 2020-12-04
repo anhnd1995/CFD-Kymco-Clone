@@ -65,7 +65,6 @@ function enableSliderProduct(width) {
 enableSliderProduct(window.innerWidth);
 
 window.onresize = function (event) {
-  console.log(this.innerWidth);
   enableSliderProduct(this.innerWidth);
 };
 
@@ -115,14 +114,6 @@ let toggleShowHide = (start, current) => {
   modelList[current].classList.remove("hide");
   modelList[current].classList.add("show");
 };
-
-// Accordion
-// $(function () {
-//   $(".plus-minus-toggle").on("click", function () {
-//     $(this).toggleClass("collapsed");
-//     $(".content").toggleClass("active").slideToggle();
-//   });
-// });
 
 $.each($(".plus-minus-toggle"), (index, button) => {
   $(button).on("click", function () {
@@ -208,4 +199,44 @@ function changePage(nextPage) {
 function getCurrentPage() {
   let currentPage = parseInt($("div[class='news__page']").attr("data-page"));
   return currentPage;
+}
+
+// ARTICLE PAGE
+
+// debounce function
+function debounce(func, wait) {
+  var timeout;
+
+  return function () {
+    var context = this,
+      args = arguments;
+
+    var executeFunction = function () {
+      func.apply(context, args);
+    };
+
+    clearTimeout(timeout);
+    timeout = setTimeout(executeFunction, wait);
+  };
+}
+
+window.onscroll = debounce(function () {
+  let currentSocialPos = $(".social a:last-of-type").offset().top + 48;
+  setInterval(checkEqual(currentSocialPos), 5000);
+  // currentSocialPos > boundary
+  //   ? $(".social").addClass("d-none")
+  //   : $(".social").removeClass("d-none");
+  // console.log("currentPos: " + currentSocialPos);
+}, 1000);
+
+function checkEqual(current) {
+  let boundary = $(".content").height() + $(".content").offset().top;
+  let currentSocialPos = $(".social a:last-of-type").offset().top + 48;
+  console.log(current);
+  console.log(currentSocialPos);
+  if (current > boundary) {
+    $(".social").addClass("d-none");
+  } else {
+    $(".social").removeClass("d-none");
+  }
 }

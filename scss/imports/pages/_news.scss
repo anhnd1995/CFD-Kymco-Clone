@@ -9,10 +9,16 @@
 
 .news__content {
   margin-bottom: 8.75vw;
+  h3 {
+    font-family: $font-heading-button;
+    text-align: center;
+    font-size: 2.25rem;
+  }
   .container {
+    position: relative;
     .news__page {
       .row {
-        margin: 5vw auto;
+        margin: 2.2rem auto;
       }
     }
   }
@@ -47,6 +53,15 @@
       .page {
         @include button(10px, 20px, 0);
       }
+    }
+  }
+  .news__other {
+    text-align: center;
+    margin-top: 4.3rem;
+    a {
+      font-family: "SFU-alt";
+      font-size: 1.56rem;
+      @include button(22px, 53px, 50px);
     }
   }
 }
