@@ -298,6 +298,8 @@ $(".item-point").mouseleave((e) => {
 
 // PRODUCTS PAGE
 window.onload = function () {
+  changePage();
+
   $.each($(".box"), (button, div) => {
     changeImage(div);
   });
@@ -331,5 +333,29 @@ function changeImage(div) {
     $(div).find(".white").removeClass("d-none");
     $(div).siblings().find(".black").removeClass("d-none");
     $(div).siblings().find(".white").addClass("d-none");
+  }
+}
+
+$("#allproductsContent").click(() => {
+  $(".productsContent__form").addClass("d-none");
+  $(".productsContent__all").removeClass("d-none");
+  changePage();
+});
+$("#option").click(() => {
+  $(".productsContent__all").addClass("d-none");
+  $(".productsContent__form").removeClass("d-none");
+  changePage();
+});
+
+function changePage() {
+  if ($(".productsContent__all").hasClass("d-none")) {
+    $("#allproductsContent").css("opacity", "0.5");
+  } else {
+    $("#allproductsContent").css("opacity", "1");
+  }
+  if ($(".productsContent__form").hasClass("d-none")) {
+    $("#option").css("opacity", "0.5");
+  } else {
+    $("#option").css("opacity", "1");
   }
 }
