@@ -240,3 +240,58 @@ function checkEqual(current) {
     $(".social").removeClass("d-none");
   }
 }
+
+// NETWORK PAGE
+$(document).ready(function () {
+  $(".scalize").scalize({
+    styleSelector: "icon",
+  });
+});
+
+$(".item-point").mouseover((e) => {
+  e.preventDefault();
+  e.stopPropagation();
+
+  switch ($(e.target).attr("data-popover")) {
+    case "#content6":
+    case "#content5":
+      $(`${$(e.target).attr("data-popover")}`).css({
+        opacity: "1",
+        "margin-top": "-10rem",
+        visibility: "visible",
+      });
+      break;
+
+    default:
+      $(`${$(e.target).attr("data-popover")}`).css({
+        opacity: "1",
+        "margin-top": "-6rem",
+        visibility: "visible",
+      });
+      break;
+  }
+});
+
+$(".item-point").mouseleave((e) => {
+  e.preventDefault();
+  e.stopPropagation();
+
+  switch ($(e.target).attr("data-popover")) {
+    case "#content6":
+    case "#content5":
+      $(`${$(e.target).attr("data-popover")}`).css({
+        opacity: "0",
+        "margin-top": "-11rem",
+        visibility: "hidden",
+      });
+      break;
+
+    default:
+      $(`${$(e.target).attr("data-popover")}`).css({
+        opacity: "0",
+        "margin-top": "-7rem",
+        visibility: "hidden",
+      });
+      break;
+  }
+});

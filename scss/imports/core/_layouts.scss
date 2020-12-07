@@ -23,6 +23,7 @@ body {
   .mainwrapper {
     width: 100%;
     margin: auto;
+    overflow-x: hidden;
   }
   @include desktop {
     font-size: 14px;
