@@ -295,3 +295,41 @@ $(".item-point").mouseleave((e) => {
       break;
   }
 });
+
+// PRODUCTS PAGE
+window.onload = function () {
+  $.each($(".box"), (button, div) => {
+    changeImage(div);
+  });
+};
+
+$.each($(".box"), (button, div) => {
+  //on click
+  $(div).click(() => {
+    $(div).siblings().removeClass("active");
+    $(div).addClass("active");
+    changeImage(div);
+  });
+
+  //on hover
+  $(div).hover(
+    () => {
+      $(div).find(".black").addClass("d-none");
+      $(div).find(".white").removeClass("d-none");
+    },
+    () => {
+      $(div).find(".black").removeClass("d-none");
+      $(div).find(".white").addClass("d-none");
+      changeImage(div);
+    }
+  );
+});
+
+function changeImage(div) {
+  if ($(div).hasClass("active")) {
+    $(div).find(".black").addClass("d-none");
+    $(div).find(".white").removeClass("d-none");
+    $(div).siblings().find(".black").removeClass("d-none");
+    $(div).siblings().find(".white").addClass("d-none");
+  }
+}
