@@ -1,5 +1,5 @@
 .banner {
-  // background: url(../../../img/banner.png);
+  // background: url(../img/banner.png);
   // height: 900px;
   // position: absolute;
   // top: 0;
@@ -306,7 +306,7 @@
 }
 
 .option {
-  background: url(../../../img/home-option.jpg);
+  background: url(../img/home-option.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 650px;
@@ -328,7 +328,7 @@
   }
 
   @include mobile {
-    background: url(../../../img/home-option-mobile.jpg);
+    background: url(../img/home-option-mobile.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 200px;
@@ -396,7 +396,7 @@
 }
 
 .network {
-  background: url(../../../img/home-network.jpg);
+  background: url(../img/home-network.jpg);
   background-size: contain;
   height: 40.625vw;
   .container {
