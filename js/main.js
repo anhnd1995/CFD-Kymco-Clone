@@ -220,26 +220,26 @@ function debounce(func, wait) {
   };
 }
 
-window.onscroll = debounce(function () {
-  let currentSocialPos = $(".social a:last-of-type").offset().top + 48;
-  setInterval(checkEqual(currentSocialPos), 5000);
-  // currentSocialPos > boundary
-  //   ? $(".social").addClass("d-none")
-  //   : $(".social").removeClass("d-none");
-  // console.log("currentPos: " + currentSocialPos);
-}, 1000);
+// window.onscroll = debounce(function () {
+//   let currentSocialPos = $(".social a:last-of-type").offset().top + 48;
+//   setInterval(checkEqual(currentSocialPos), 5000);
+//   // currentSocialPos > boundary
+//   //   ? $(".social").addClass("d-none")
+//   //   : $(".social").removeClass("d-none");
+//   // console.log("currentPos: " + currentSocialPos);
+// }, 1000);
 
-function checkEqual(current) {
-  let boundary = $(".content").height() + $(".content").offset().top;
-  let currentSocialPos = $(".social a:last-of-type").offset().top + 48;
-  console.log(current);
-  console.log(currentSocialPos);
-  if (current > boundary) {
-    $(".social").addClass("d-none");
-  } else {
-    $(".social").removeClass("d-none");
-  }
-}
+// function checkEqual(current) {
+//   let boundary = $(".content").height() + $(".content").offset().top;
+//   let currentSocialPos = $(".social a:last-of-type").offset().top + 48;
+//   console.log(current);
+//   console.log(currentSocialPos);
+//   if (current > boundary) {
+//     $(".social").addClass("d-none");
+//   } else {
+//     $(".social").removeClass("d-none");
+//   }
+// }
 
 // NETWORK PAGE
 $(document).ready(function () {

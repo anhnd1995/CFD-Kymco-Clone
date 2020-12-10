@@ -103,13 +103,17 @@
   font-size: 1.4rem;
   padding: 1rem 0rem;
   cursor: pointer;
+
+  h2 {
+    font-size: 1.3rem;
+  }
 }
 
 .--medium {
   min-width: 250px;
 }
 .--large {
-  min-width: 500px;
+  min-width: 28rem;
 }
 
 .--black {

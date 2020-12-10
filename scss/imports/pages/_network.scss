@@ -46,8 +46,8 @@
         }
         .content.center-top {
           margin-top: -7rem;
-          margin-left: -6.27rem;
-          display: block !important;
+          margin-left: -6.4rem;
+          display: block;
           visibility: hidden;
           transition: 0.4s;
         }
@@ -55,8 +55,26 @@
           margin-top: -11rem;
         }
         #content5 {
-          margin-left: -14.1rem;
-          margin-top: -11rem;
+          margin-left: -12.7rem;
+          margin-top: -10rem;
+        }
+
+        @include desktop {
+          .content.center-top {
+            margin-left: -7.53rem;
+          }
+          #content6 {
+            margin-top: -11rem;
+          }
+          #content5 {
+            margin-left: -12.5rem;
+          }
+        }
+
+        @include mobile {
+          .content {
+            display: none !important;
+          }
         }
       }
 
